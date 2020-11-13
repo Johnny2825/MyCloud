@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.20351758793969849" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <items>
+    <AnchorPane fx:id="authPanel" minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="598.0">
+         <children>
+            <TextField fx:id="pathField" layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="136.0" promptText="Path" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
+            <TextField fx:id="loginField" layoutX="181.0" layoutY="26.0" prefHeight="26.0" prefWidth="136.0" promptText="Login" AnchorPane.topAnchor="25.0" />
+            <Button layoutX="509.0" layoutY="26.0" mnemonicParsing="false" onAction="#sendAuth" text="Connect" AnchorPane.rightAnchor="37.39999999999998" AnchorPane.topAnchor="25.0" />
+            <PasswordField fx:id="passField" layoutX="342.0" layoutY="26.0" prefHeight="26.0" prefWidth="136.0" promptText="Password" AnchorPane.topAnchor="25.0" />
+         </children></AnchorPane>
+    <AnchorPane fx:id="workPanel" minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="540.0">
+         <children>
+            <ListView fx:id="listClient" layoutX="23.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="58.0" />
+            <ListView fx:id="listSever" layoutX="359.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="58.0" />
+            <Label layoutX="126.0" layoutY="23.0" text="Yours" AnchorPane.leftAnchor="126.0" />
+            <Label layoutX="444.0" layoutY="23.0" text="Server" AnchorPane.rightAnchor="126.0" />
+            <Button layoutX="258.0" layoutY="80.0" mnemonicParsing="false" onAction="#upload" prefHeight="26.0" prefWidth="75.0" text="&gt;&gt;Server" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="265.0" />
+            <Button layoutX="258.0" layoutY="130.0" mnemonicParsing="false" onAction="#download" prefHeight="26.0" prefWidth="75.0" text="&lt;&lt;Client" wrapText="true" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="265.0" />
+            <Button layoutX="258.0" layoutY="231.0" mnemonicParsing="false" onAction="#disconnect" prefHeight="26.0" prefWidth="75.0" text="Disconnect" wrapText="true" />
+            <Button layoutX="95.0" layoutY="265.0" mnemonicParsing="false" onAction="#deleteFileFromClient" prefHeight="26.0" prefWidth="75.0" text="Delete" wrapText="true" />
+            <Button layoutX="434.0" layoutY="265.0" mnemonicParsing="false" onAction="#deleteFileFromServer" prefHeight="26.0" prefWidth="75.0" text="Delete" wrapText="true" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
